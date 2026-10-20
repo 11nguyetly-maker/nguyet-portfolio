@@ -32,10 +32,32 @@ body:after{width:180px;height:180px;left:-90px;bottom:8%;background:radial-gradi
 .constellation .stars{color:var(--rose);letter-spacing:1.2rem;font-size:1.2rem;margin:8px 0}
 @media(max-width:650px){.moon-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.note-grid{grid-template-columns:1fr}}
 
+
+/* Brighter moonlit palette + gentle motion */
+:root{--bg:#241722;--panel:#342231;--text:#fff5f6;--muted:#d0bac8;--rose:#f0b7cc;--wine:#a84565;--gold:#f4dca0;--line:#684458}
+body{background:radial-gradient(ellipse at 15% 8%,#70415b66,transparent 32%),radial-gradient(ellipse at 88% 42%,#5d385766,transparent 30%),radial-gradient(ellipse at 45% 95%,#a8456524,transparent 35%),var(--bg)}
+header{background:#241722e8}
+.moon-art{background:radial-gradient(circle at 50% 42%,#78506b,#39263d 65%,#261a2a);box-shadow:inset 0 0 65px #f4dca01a}
+.moon{box-shadow:0 0 28px #f4dca055,0 0 90px #f0b7cc55}
+.btn.primary{background:linear-gradient(135deg,#a84565,#c76d8d);border-color:#d88ba7}
+.card{background:linear-gradient(145deg,#432b40,#30202f);border-color:#f0b7cc22;box-shadow:0 8px 28px #120a1422;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:#f0b7cc66}
+.tag,.skill span{background:#4a3045;border-color:#f0b7cc30}
+.star{animation:twinkle 3.4s ease-in-out infinite alternate}
+.s2{animation-delay:.8s}.s3{animation-delay:1.4s}.s4{animation-delay:2s}
+@keyframes twinkle{from{opacity:.45;transform:scale(.85)}to{opacity:1;transform:scale(1.12)}}
+.dream-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.dream-card{min-height:180px;position:relative;overflow:hidden}
+.dream-card .symbol{font-size:1.8rem}
+.dream-card:after{content:"☾";position:absolute;right:12px;bottom:-42px;font-size:8rem;color:#f4dca010}
+.closing-note{margin-top:20px;padding:28px;border:1px solid #f0b7cc35;background:linear-gradient(120deg,#a8456524,#f4dca010);text-align:center}
+.closing-note .little-moon{font-size:2.2rem;color:var(--gold)}
+@media(max-width:650px){.dream-grid{grid-template-columns:1fr}.hero{gap:28px;padding:48px 0}.moon-art{min-height:300px}nav{gap:12px;flex-wrap:wrap;justify-content:flex-end}}
+
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#home">明玥 <span>·</span> NGUYỆT</a><nav aria-label="Điều hướng"><a href="#about">Về mình</a><a href="#work">Dự án</a><a href="#skills">Kỹ năng</a><a href="#journey">Hành trình</a><a href="#moon">Ánh trăng</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="#home">明玥 <span>·</span> NGUYỆT</a><nav aria-label="Điều hướng"><a href="#about">Về mình</a><a href="#work">Dự án</a><a href="#skills">Kỹ năng</a><a href="#journey">Hành trình</a><a href="#moon">Ánh trăng</a><a href="#dreams">Ước mơ</a></nav></div></header>
 <main class="wrap">
 <section class="hero" id="home" style="border:0"><div><div class="eyebrow">Personal portfolio · 2026</div><h1>Still becoming.<br><em>Always curious.</em></h1><p class="intro">Mình là Nguyệt — một người thích đào sâu suy nghĩ, học ngôn ngữ, khám phá nghệ thuật và tự tìm con đường của riêng mình. Mình tin cá tính nằm trong cách mình nhìn thế giới và những điều mình chọn làm.</p><div class="buttons"><a class="btn primary" href="#work">Khám phá dự án ↘</a><a class="btn" href="#about">Một chút về mình</a></div></div><div class="moon-art" role="img" aria-label="Mặt trăng trên nền trời đêm màu đỏ rượu vang"><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✧</span><span class="star s4">✦</span><div class="moon"></div><div class="caption">under the same moon</div></div></section>
 <section id="about"><div class="section-head"><div class="eyebrow">01 / a first impression</div><h2>Một người, nhiều lớp.</h2><p class="muted">Vài nét phác họa về mình ở hiện tại — không phải chiếc hộp để nhốt mình vào.</p></div><div class="grid"><article class="card"><h3>Đầu óc thích phân tích</h3><p>Mình muốn hiểu bản chất thay vì chỉ nhớ đáp án. Mình thích câu hỏi khó, lập luận logic và những cuộc trò chuyện mở ra góc nhìn mới.</p></article><article class="card"><h3>Độc lập, nhưng không vô cảm</h3><p>Mình trân trọng sự chân thành, những mối quan hệ có chiều sâu và cảm giác được tôn trọng. Mình có một thế giới riêng để khám phá.</p></article><article class="card"><h3>Tham vọng có chủ đích</h3><p>Mình muốn phát triển năng lực thật sự, tự lựa chọn tương lai và tạo ra nhiều cơ hội cho bản thân.</p></article><article class="card"><h3>Không ngừng trở thành</h3><p>Mình vẫn đang thử nghiệm, đổi hướng và học từ điều chưa hoàn hảo. Mình không cần biết tất cả ngay bây giờ.</p></article></div><div class="quote">“Mình không cần có mọi câu trả lời ngay hôm nay. Mình chỉ cần tiếp tục tò mò, lựa chọn và lớn lên.”</div><div class="tags"><span class="tag">Tò mò</span><span class="tag">Tư duy phản biện</span><span class="tag">Có chính kiến</span><span class="tag">Thích chiều sâu</span><span class="tag">Độc lập</span><span class="tag">Sáng tạo</span></div></section>
@@ -49,6 +71,16 @@ body:after{width:180px;height:180px;left:-90px;bottom:8%;background:radial-gradi
 <section id="notes"><div class="section-head"><div class="eyebrow">07 / little notes to self</div><h2>Những lời nhắc nhỏ.</h2><p class="muted">Để dành cho những ngày mình cần chậm lại, hoặc bắt đầu lại.</p></div>
 <div class="note-grid"><article class="card note-card"><div class="tiny">01 · growth</div><h3>Không cần vội</h3><p>Mình được phép tiến bộ theo nhịp riêng. Chậm không có nghĩa là đứng yên.</p></article><article class="card note-card"><div class="tiny">02 · courage</div><h3>Cứ thử trước đã</h3><p>Một phiên bản đầu tiên không cần hoàn hảo. Nó chỉ cần tồn tại để mình có thể làm tốt hơn.</p></article><article class="card note-card"><div class="tiny">03 · identity</div><h3>Giữ lấy chất riêng</h3><p>Mình có thể học hỏi từ thế giới mà không cần trở thành bản sao của bất kỳ ai.</p></article></div></section>
 <section id="inspiration"><div class="section-head"><div class="eyebrow">08 / things that stay</div><h2>Những điều luôn khiến mình tò mò.</h2></div><div class="grid"><article class="card"><h3>Ngôn ngữ mở ra thế giới</h3><p>Mỗi ngôn ngữ cho mình một cách khác để diễn đạt, quan sát và hiểu con người.</p></article><article class="card"><h3>Nghệ thuật giữ lại cảm xúc</h3><p>Một giai điệu, một câu văn hay một khung hình có thể nói thay điều mình chưa biết gọi tên.</p></article><article class="card"><h3>Ý tưởng cần được thử nghiệm</h3><p>Mình muốn biến những suy nghĩ trong đầu thành thứ gì đó có thể nhìn thấy, dùng thử và cải thiện.</p></article><article class="card"><h3>Tương lai còn rộng</h3><p>Mình không cần chọn xong cả cuộc đời ngay bây giờ. Mình chỉ cần xây nền tảng cho những lựa chọn sau này.</p></article></div></section>
+
+
+<section id="dreams"><div class="section-head"><div class="eyebrow">09 / a little dreamboard</div><h2>Những điều mình muốn vun trồng.</h2><p class="muted">Không phải một danh sách phải hoàn thành ngay lập tức — chỉ là vài ngọn đèn nhỏ để mình nhớ hướng đi.</p></div>
+<div class="dream-grid">
+<article class="card dream-card"><div class="symbol">✧</div><h3>Học hỏi với sự tò mò</h3><p>Mình muốn tiếp tục học ngôn ngữ, đặt câu hỏi và bước vào những lĩnh vực mới mà chưa cần biết trước mình sẽ giỏi đến đâu. Có thể sẽ có những ngày hơi rối, nhưng mỗi lần hiểu thêm một chút đều đáng quý.</p></article>
+<article class="card dream-card"><div class="symbol">☾</div><h3>Tạo ra những thứ mang dấu ấn riêng</h3><p>Một trang web, một trang nhật ký, một bản vẽ hay một ý tưởng nho nhỏ — mình muốn tập biến những điều tưởng tượng thành thứ có thật, rồi từ từ làm chúng tốt hơn.</p></article>
+<article class="card dream-card"><div class="symbol">✦</div><h3>Giữ chỗ cho nghệ thuật</h3><p>Mình muốn luôn có một góc cho âm nhạc, văn chương, những hình ảnh đẹp và những điều khiến mình dừng lại ngắm lâu hơn vài giây. Không phải thứ gì cũng cần có ích mới đáng để yêu thích.</p></article>
+<article class="card dream-card"><div class="symbol">☼</div><h3>Lớn lên theo cách của mình</h3><p>Mình không cần có sẵn mọi câu trả lời. Mình chỉ mong ngày mai hiểu bản thân hơn hôm qua một chút, biết điều gì quan trọng với mình và đủ can đảm để thử điều mới.</p></article>
+</div>
+<div class="closing-note"><div class="little-moon">☾ ✧ ☽</div><p style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:8px 0">Mình không cần trở thành mặt trăng tròn trong một đêm.</p><p class="muted" style="margin:0">Cứ lớn lên theo nhịp của mình — những mùa trăng vẫn luôn có chỗ cho mọi phiên bản.</p></div></section>
 
 <section class="contact" id="contact"><div class="eyebrow">05 / say hello</div><h2>Mọi hành trình thú vị đều bắt đầu bằng một điều tò mò.</h2><p>Nếu bạn muốn trao đổi về ngôn ngữ, nghệ thuật hay một dự án sáng tạo, mình rất vui được kết nối khi bổ sung kênh liên hệ công khai.</p><a class="btn primary" href="#home">Trở về đầu trang ↑</a><p style="font-size:.8rem">Không công khai thông tin cá nhân riêng tư ở đây.</p></section>
 </main><footer><div class="wrap foot"><span>© <span id="year"></span> 明玥 · Nguyệt</span><span>Made with curiosity & a little moonlight.</span></div></footer>
